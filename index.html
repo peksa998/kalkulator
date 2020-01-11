@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<body>
+
+<h2>JavaScript kalkulator</h2>
+<select id="uzmi">
+<option value="sabiranje">Sabiranje</option>
+<option value="oduzimanje">Oduzimanje</option>
+<option value="mnozenje">Mnozenje</option>
+<option value="deljenje">Deljenje</option>
+</select>
+
+// broj1 : kreirati polje za prvi broj
+<input type="text" id="br1">
+// broj2: kreirati polje za drugi broj
+<input type="text" id="br2">
+// dugme za submit
+<button onclick="racun();">=</button>
+// prikaz rezultata
+<input type="text" id="br3">
+
+<script>
+    function racun () {
+        var x = parseInt(document.getElementById("br1").value);
+        var y = parseInt(document.getElementById("br2").value);
+        var uzmi1 = document.getElementById("uzmi").value;
+
+        if (uzmi1 === 'sabiranje') {
+            var z = parseInt(document.getElementById("br3").value = x + y);
+        }
+        if (uzmi1 === 'oduzimanje') {
+            var z = parseInt(document.getElementById("br3").value = x - y);
+        }
+        if (uzmi1 === 'mnozenje') {
+            var z = parseInt(document.getElementById("br3").value = x * y);
+        }
+        if (uzmi1 === 'deljenje') {
+            var z = parseInt(document.getElementById("br3").value = x / y);
+        }
+    }
+</script>
+
+</body>
